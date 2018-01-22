@@ -16,8 +16,8 @@ MonoBehaviour:
     ufoLicenseKey: QVpQb1RFdi8vLy8vQUFBQUtDUWo1SWd4QjBwVHJwZThNT2pERDZwRDUzd0crenNsV3pUOEx2WWdlSTJCQVJ3dm1BOU85cWNlaXdMeHdHRm44UjRhR2gyMElDeFpGZHZyaDJSYzZrMHh1RmJvajE4bWY2MlNiQ3RSODhQRnhYck1STzBBaE5zWGhVN2pDc0o2UDlmZi9Lb0Z5SFU0R2ozVXNHZE1FQjdlUmJVa09xamNFdFY5RGZOdnd4dDNSbGh2QlNvTXo4OFVUdnZyK1h3TEN2OE82QXl3WkdIZFBUckQxV1RuUHJzSTJpZnZYeVVBNVFMc215SkFGczJ0UnpBQWJCalg5RkgrMVBjc09IZmRjTWtyZ1gvaFFPeWVsQXZ2WW9VRDJ1RGpaaUFBZ2YvZko5TXgxS2ptbnFnZC9JZDFlREF0aXdPMmZ4SFNvNDFhZ1JaTWZCZHhnaFNZdm4rOVpHMHZzOGErV1ZKczhOZUFXbll5MmNEbDJGaWM=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 6
+    maxSimultaneousObjectTargets: 6
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
