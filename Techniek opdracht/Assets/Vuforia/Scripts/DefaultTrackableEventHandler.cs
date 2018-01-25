@@ -73,6 +73,13 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
 
+        //ADDED
+        var ActiveScripts = GetComponentsInChildren<ObjectActiveScript>(true);
+        foreach (var script in ActiveScripts)
+        {
+            script.actieveQR = true;
+        }
+
         // Enable rendering:
         foreach (var component in rendererComponents)
             component.enabled = true;
@@ -92,6 +99,13 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
+
+        //ADDED
+        var ActiveScripts = GetComponentsInChildren<ObjectActiveScript>(true);
+        foreach (var script in ActiveScripts)
+        {
+            script.actieveQR = false;
+        }
 
         // Disable rendering:
         foreach (var component in rendererComponents)

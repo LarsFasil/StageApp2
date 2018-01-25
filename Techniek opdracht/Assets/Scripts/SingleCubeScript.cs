@@ -2,17 +2,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingleCubeScript : MonoBehaviour {
-    private MeshRenderer[] boxMeshes;
+public class SingleCubeScript : MonoBehaviour
+{
+    public static bool cubeActive, piramidActive, ballActive;
+    private MeshRenderer[] boxMeshes, piramidMeshes, ballMeshes;
+    public GameObject boxParent, box;
+    ObjectActiveScript[] instances;
 
-	// Use this for initialization
-	void Start () {
-		
-        //elke cubemesh uit de scene pakken en bewaren in een array
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        cubeActive = false;
+        piramidActive = false;
+        ballActive = false;
+
+        instances = boxParent.GetComponentsInChildren<ObjectActiveScript>();
+        
+
+    }
+
+    void Update()
+    {
+        //CheckMeshes();
+        FindQRBools();
+        DrawCube();
+    }
+
+    void DrawCube()
+    {
+        if (cubeActive)
+        {
+            //showcube
+            box.SetActive(true);
+        }
+        else
+        {
+            box.SetActive(false);
+        }
+    }
+
+    void FindQRBools()
+    {
+        cubeActive = false;
+        foreach (var i in instances)
+        {
+            if (i.actieveQR)
+            {
+                cubeActive = true;
+            }
+        }
+    }
+
+    void findMeshes()
+    {
+        GameObject[] allBoxes;
+        allBoxes = GameObject.FindGameObjectsWithTag("Box");
+        Debug.Log(allBoxes);
+        for (int i = 0; i < allBoxes.Length; i++)
+        {
+            boxMeshes.SetValue(allBoxes[i].GetComponent<MeshRenderer>(), i);
+        }
+    }
 }
