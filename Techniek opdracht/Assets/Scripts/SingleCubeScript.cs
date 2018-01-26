@@ -32,11 +32,11 @@ public class SingleCubeScript : MonoBehaviour
         if (cubeActive)
         {
             //showcube
-            box.SetActive(true);
+            //box.SetActive(true);
         }
         else
         {
-            box.SetActive(false);
+            //box.SetActive(false);
         }
     }
 
@@ -47,6 +47,11 @@ public class SingleCubeScript : MonoBehaviour
         {
             if (i.actieveQR)
             {
+                if (!cubeActive)
+                {
+                    //methode aanroepen in i die zijn cube zichtbaar maakt.
+                    i.ActivateMyCube();
+                }
                 cubeActive = true;
             }
         }
